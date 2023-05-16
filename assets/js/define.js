@@ -1,4 +1,4 @@
-import definitions from "./data.json"
+import definitions from "./data.json" assert {type: 'json'};
 
 window.onload = function() {
     for(i = 0; i < dataObj.data.length; i++)
