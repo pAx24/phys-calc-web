@@ -48,6 +48,18 @@ const dataObj =
             equasion: "first + first",
             displayEq: "FIRST + FIRST",
             measure: "msr"
+        },
+        {
+            name: "three",
+            fields : [
+                { field: "first 3" },
+                { field: "NO_INPUT" },
+                { field: "NO_INPUT" },
+                { field: "NO_INPUT" }
+            ],
+            equasion: "first + first",
+            displayEq: "FIRST + FIRST",
+            measure: "msr"
         }
     ]
 };
@@ -122,7 +134,7 @@ function Show(result) {
     const close = document.createElement("button");
     close.id = "close";
     close.classList.add("button-ripple");
-    close.style = "margin-left: 20%; width: 60%; right: 0px; bottom: 0px;";
+    close.style = "margin-left: 38%; width: 24%; right: 0px; bottom: 0px;";
     close.innerHTML = "Затвори";
     close.addEventListener('click', function() {Dispose()}, false);
 
