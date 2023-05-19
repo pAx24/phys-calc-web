@@ -1,19 +1,48 @@
-import definitions from "./data.json" assert {type: 'application/json'};
+const dataObj =
+{
+    data: [
+        {
+            name: "def-zero",
+            definition: "0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            color: "yellow"
+        },
+        {
+            name: "def-one",
+            definition: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            color: "orange"
+        },
+        {
+            name: "def-two",
+            definition: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            color: "green"
+        },
+        {
+            name: "def-three",
+            definition: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            color: "blue"
+        },
+        {
+            name: "def-three",
+            definition: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            color: "blue"
+        }
+    ]
+};
 
 window.onload = function() {
+    let i = 0;
     for(i = 0; i < dataObj.data.length; i++)
     {
-        console.log(definitions[1].name)
-        const div = document.createElement("div");
-        div.id = "div-" + i;
-        div.name = i;
-        div.classList.add("button-ripple");
-        div.classList.add(dataObj.data[i].color);
-        div.addEventListener('click', function() {Show(this.name)}, false);
-        div.style = "margin: 0.25cm; text-align: center; height: auto; width: calc(20% - 1cm);";
-        div.innerHTML = dataObj.data[i].name;
+        const button = document.createElement("button");
+        button.id = "button-" + i;
+        button.name = i;
+        button.classList.add("button-ripple");
+        button.classList.add(dataObj.data[i].color);
+        button.addEventListener('click', function() {Show(this.name)}, false);
+        button.style = "margin: 0.25cm; text-align: center; height: auto; width: calc(20% - 1cm);";
+        button.innerHTML = dataObj.data[i].name;
 
-        document.getElementById("definitions-container").appendChild(div);
+        document.getElementById("definitions-container").appendChild(button);
     }
 }
 
@@ -32,7 +61,7 @@ function Show(id) {
     const close = document.createElement("button");
     close.id = "close";
     close.classList.add("button-ripple");
-    close.style = "margin-left: 20%; width: 60%; right: 0px; bottom: 0px;";
+    close.style = "margin-left: 38%; width: 24%; right: 0px; bottom: 0px;";
     close.innerHTML = "Затвори";
     close.addEventListener('click', function() {Dispose()}, false);
 
