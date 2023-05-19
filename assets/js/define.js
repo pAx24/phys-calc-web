@@ -30,6 +30,7 @@ const dataObj =
 };
 
 window.onload = function() {
+    let i = 0;
     for(i = 0; i < dataObj.data.length; i++)
     {
         const button = document.createElement("button");
