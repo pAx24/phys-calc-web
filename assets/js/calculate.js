@@ -48,18 +48,6 @@ const dataObj =
             equasion: "first + first",
             displayEq: "FIRST + FIRST",
             measure: "msr"
-        },
-        {
-            name: "three",
-            fields : [
-                { field: "first 3" },
-                { field: "NO_INPUT" },
-                { field: "NO_INPUT" },
-                { field: "NO_INPUT" }
-            ],
-            equasion: "first + first",
-            displayEq: "FIRST + FIRST",
-            measure: "msr"
         }
     ]
 };
