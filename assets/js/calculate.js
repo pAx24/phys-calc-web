@@ -123,7 +123,7 @@ function Show(result) {
     close.id = "close";
     close.type = "button";
     close.classList.add("button-ripple");
-    close.style = "margin-left: 38%; width: 24%; right: 0px; bottom: 0px;";
+    close.style = "right: 0px; bottom: 0px;";
     close.innerHTML = "Затвори";
     close.addEventListener('click', function() {Dispose()}, false);
 
