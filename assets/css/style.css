@@ -111,10 +111,11 @@ p.footer {
 }
 
 div.pop-up {
+    max-width: 80%;
+    min-width: 50%;
+
     top: 50%;
     left: 50%;
-    width: 30%;
-
     transform: translate(-50%, -50%);
     position: absolute;
     padding: 1cm;
@@ -168,7 +169,6 @@ input.text-field {
     border-radius: 20px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 24px;
-    animation: fadeIn 0.25s;
 }
 
 .navigation {
