@@ -5,6 +5,9 @@ window.onload = function() {
         
         const mobileText = document.createElement("p");
         mobileText.style = "text-size: 0.5cm";
+        
+        document.body.appendChild(mobileBlock);
+        mobileBlock.appendChild(mobileText);
     }
 }
 
